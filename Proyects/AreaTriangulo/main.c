@@ -3,10 +3,10 @@
 #include <locale.h>
 
 /*
- * Este programa calcula el ï¿½rea de un triï¿½ngulo
+ * Este programa calcula el área de un triángulo
  * validando las entradas.
  * Autor: Ordaz Magos Juan Pablo
- * Fecha de creaciï¿½n: 20/01/25
+ * Fecha de creación: 20/01/25
  */
 
 float baseTriangulo, alturaTriangulo, area;
@@ -15,9 +15,9 @@ int main(int argc, char *argv[])
   setlocale(LC_ALL, "");
   do
   {
-    printf("Escribe el valor de la base del triï¿½ngulo : ");
+    printf("Escribe el valor de la base del triángulo : ");
     scanf("%f", &baseTriangulo);
-    printf("\nEscribe el valor de la altura del triï¿½ngulo: ");
+    printf("\nEscribe el valor de la altura del triángulo: ");
     scanf("%f", &alturaTriangulo);
 
     if ((baseTriangulo <= 0) || (alturaTriangulo <= 0))
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
   } while ((baseTriangulo <= 0) || (alturaTriangulo <= 0));
 
   area = baseTriangulo * alturaTriangulo / 2;
-  printf("\nï¿½rea del triï¿½ngulo: %.2f\n", area);
+  printf("\nÁrea del triángulo: %.2f\n", area);
 
   return EXIT_SUCCESS;
 }
