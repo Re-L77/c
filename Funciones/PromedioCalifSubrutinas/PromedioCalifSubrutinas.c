@@ -32,7 +32,7 @@ void pedirCalif() {
     printf("\nDigita la calificaión %i del alumno: ", CuentaCalif);
     scanf("%f", &calif);
     valido = validaCalif();
-    if (valido = true) {
+    if (valido == true) {
       suma += calif;
     }
   }
