@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     }while (articulos <= 0 );
     while (contador != articulos) {
       do {
-        printf("Precio del artículo: ");
+        printf("Precio del artículo [%i]: ", contador);
         scanf("%f", &precio);
         if (precio <= 0) {
           printf("Error debe ser mayor a 0.\n");
