@@ -8,7 +8,6 @@
 * Fecha: 25-02-25
 * Versión: 3.0
 */
-float monto, precio;
 
 int leerArticulos();
 float calcularMonto(float articulos);
@@ -43,13 +42,14 @@ int leerArticulos(){
 }
 
 float leerPrecio(){
- do {
-   printf("Precio del artículo:");
-   scanf("%f", &precio);
-   if (precio <= 0) {
-     printf("Error debe ser mayor a 0.\n");
-   }
-   }while (precio <= 0);
+  static float precio; 
+  do {
+    printf("Precio del artículo:");
+    scanf("%f", &precio);
+    if (precio <= 0) {
+      printf("Error debe ser mayor a 0.\n");
+    }
+  }while (precio <= 0);
   return precio;
 }
 
