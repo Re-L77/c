@@ -8,41 +8,8 @@
  * locales y arreglos Autor: Ordaz Magos Juan Pablo Fecha: 26-02-2025 v: 3.0
  */
 
-void capturaCalif();
-void validaCalif(int CuentaCalif, float calificacion);
-void verDatos();
-float calcular();
-void verProm(float promedio);
-
 float calificaciones[3];
 float calificacion;
-
-int main(int argc, char *argv[]) {
-  setlocale(LC_ALL, "");
-  char resp;
-  float acumulador, promedio;
-  do {
-    system("clear");
-    capturaCalif();
-    promedio = calcular();
-    verDatos();
-    verProm(promedio);
-    printf("\n¿Deseas calcular otro promedio?: ");
-    fflush(stdin);
-    scanf(" %c", &resp);
-  } while (resp == 's' || resp == 'S');
-  return EXIT_SUCCESS;
-}
-
-void capturaCalif() {
-  int CuentaCalif;
-  for (CuentaCalif = 0; CuentaCalif <= 2; CuentaCalif++) {
-    printf("\nCalificación [%i]: ", CuentaCalif);
-    scanf("%f", &calificacion);
-    calificaciones[CuentaCalif] = calificacion;
-    validaCalif(CuentaCalif, calificaciones[CuentaCalif]);
-  }
-}
 
 // Declaración de procedimientos y funciones
 void validaCalif(int CuentaCalif, float calificacion) {
@@ -52,6 +19,16 @@ void validaCalif(int CuentaCalif, float calificacion) {
     printf("\n Digita nuevamente la calificación: ");
     scanf("%f", &calificacion);
     calificaciones[CuentaCalif] = calificacion;
+  }
+}
+
+void capturaCalif() {
+  int CuentaCalif;
+  for (CuentaCalif = 0; CuentaCalif <= 2; CuentaCalif++) {
+    printf("\nCalificación [%i]: ", CuentaCalif);
+    scanf("%f", &calificacion);
+    calificaciones[CuentaCalif] = calificacion;
+    validaCalif(CuentaCalif, calificaciones[CuentaCalif]);
   }
 }
 
@@ -75,4 +52,21 @@ float calcular() {
   }
   promedio = suma / 3;
   return promedio;
+}
+
+int main(int argc, char *argv[]) {
+  setlocale(LC_ALL, "");
+  char resp;
+  float acumulador, promedio;
+  do {
+    system("clear");
+    capturaCalif();
+    promedio = calcular();
+    verDatos();
+    verProm(promedio);
+    printf("\n¿Deseas calcular otro promedio?: ");
+    fflush(stdin);
+    scanf(" %c", &resp);
+  } while (resp == 's' || resp == 'S');
+  return EXIT_SUCCESS;
 }

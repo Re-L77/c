@@ -9,8 +9,6 @@ pedir_directorio(){
     if [ -z "$PARAM" ]; then
       pedir_directorio
     fi
-  else
-    DIRECTORIO=$1
   fi
 }
 pedir_directorio
