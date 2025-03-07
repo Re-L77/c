@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,6 +9,7 @@
  */
 
 float datos[4][3];
+bool valido = false;
 
 void capturar() {
   static int fila;
@@ -19,13 +21,42 @@ void capturar() {
       cont++;
     }
   }
+  valido = true;
 }
-void verD() {}
-void multiplica() {}
+
+void verD() {
+  if (valido == true) {
+    for (int fila = 0; fila <= 3; fila++) {
+      for (int col = 0; col <= 2; col++) {
+        printf("[%f] ", datos[fila][col]);
+      }
+      printf("\n");
+    }
+  } else {
+    printf("[ERROR] - Matriz vacía.\n");
+  }
+}
+
+void multiplica() {
+  static float res[4][3];
+  static float escalar;
+  if (valido == true) {
+    printf("Digite escalar: ");
+    scanf("%f", &escalar);
+    for (int fila = 0; fila <= 3; fila++) {
+      for (int col = 0; col <= 2; col++) {
+        res[fila][col] = datos[fila][col] * escalar;
+      }
+    }
+  } else {
+    printf("[ERROR] - Matriz vacía.\n");
+  }
+}
 
 int main(int argc, char *argv[]) {
   char resp;
   int opc;
+  system("clear");
   do {
     printf("\nMENÚ\n");
     printf("\n 1- Capturar datos.");
@@ -41,8 +72,12 @@ int main(int argc, char *argv[]) {
       printf("[HECHO] - Capturado con exito.\n");
       break;
     case 2:
+      system("clear");
+      verD();
       break;
     case 3:
+      system("clear");
+      multiplica();
       break;
     case 4:
       printf("\n¡¡ADIÓS!!\n");
