@@ -14,11 +14,12 @@ bool valido = false;
 void capturar() {
   static int fila;
   static int col;
-  static int cont = 1;
+  static int cont;
+  cont = 1;
   for (fila = 0; fila < 4; fila++) {
     for (col = 0; col <= 2; col++) {
-      datos[fila][col] = cont;
-      cont++;
+      printf("Número [%d][%d] :", fila, col);
+      scanf("%f", &datos[fila][col]);
     }
   }
   valido = true;
@@ -46,7 +47,9 @@ void multiplica() {
     for (int fila = 0; fila <= 3; fila++) {
       for (int col = 0; col <= 2; col++) {
         res[fila][col] = datos[fila][col] * escalar;
+        printf("[%f] ", res[fila][col]);
       }
+      printf("\n");
     }
   } else {
     printf("[ERROR] - Matriz vacía.\n");
