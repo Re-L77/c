@@ -1,0 +1,3 @@
+/home/re-l/Escritorio/github/c/Sonidos/build/CMakeFiles/Sonidos.dir
+/home/re-l/Escritorio/github/c/Sonidos/build/CMakeFiles/edit_cache.dir
+/home/re-l/Escritorio/github/c/Sonidos/build/CMakeFiles/rebuild_cache.dir

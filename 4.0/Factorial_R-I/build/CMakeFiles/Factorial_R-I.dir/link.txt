@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/Factorial_R-I.dir/link.d "CMakeFiles/Factorial_R-I.dir/src/Factorial_R-I.c.o" -o Factorial_R-I  -lcurses -lform

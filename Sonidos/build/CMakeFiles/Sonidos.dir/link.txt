@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/Sonidos.dir/link.d CMakeFiles/Sonidos.dir/src/Sonidos.c.o -o Sonidos  -lcurses -lform

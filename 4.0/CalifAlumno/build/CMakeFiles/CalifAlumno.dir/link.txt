@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/CalifAlumno.dir/link.d CMakeFiles/CalifAlumno.dir/src/CalifAlumno.c.o -o CalifAlumno  -lm
