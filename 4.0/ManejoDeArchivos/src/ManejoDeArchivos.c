@@ -5,33 +5,40 @@
 FILE *archivo;
 char p1;
 
-void CrearArchivo() {
+void CrearArchivo()
+{
   archivo = fopen("ArchivoEjemplo.txt", "w");
-  if (archivo != NULL) {
-    printf("\n Archivo creado con éxito \n");
+  if (archivo != NULL)
+  {
+    printf("\n Archivo creado con Ã©xito \n");
     printf(
-        "\n Teclea la información a guardar, para terminar presiona enter: \n");
+        "\n Teclea la informaciÃ³n a guardar, para terminar presiona enter: \n");
     fflush(stdin);
     while ((p1 = getchar()) != '\n')
       fputc(p1, archivo);
     fclose(archivo);
     printf("\n El archivo se ha cerrado\n");
-  } else
+  }
+  else
     printf("\n No se puede abrir el archivo\n");
 }
 
-void VerArchivo() {
-  if ((archivo = fopen("ArchivoEjemplo.txt", "r")) != NULL) {
+void VerArchivo()
+{
+  if ((archivo = fopen("ArchivoEjemplo.txt", "r")) != NULL)
+  {
     printf("\n El archivo existe. El contenido es el siguiente: \n");
     while ((p1 = fgetc(archivo)) != EOF) // EOF indica el final del archivo
       putchar(p1);
     fclose(archivo);
     printf("\n Archivo cerrado\n");
-  } else
+  }
+  else
     printf("\n No se pudo abrir el archivo\n");
 }
 
-int menu() {
+int menu()
+{
   int opcion;
   printf("\n MENU\n");
   printf(" 1.- CREAR ARCHIVO\n");
@@ -43,13 +50,16 @@ int menu() {
   return opcion;
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
   int respuesta;
   setlocale(LC_ALL, "");
-  do {
+  do
+  {
     system("clear"); // Cambiado para Linux
     respuesta = menu();
-    switch (respuesta) {
+    switch (respuesta)
+    {
     case 1:
       CrearArchivo();
       getchar(); // Para hacer una pausa antes de continuar
@@ -62,7 +72,7 @@ int main(int argc, char *argv[]) {
       printf("\n Programa Terminado \n");
       break;
     default:
-      printf("\n La opción elegida es inválida\n");
+      printf("\n La opciï¿½n elegida es invï¿½lida\n");
       getchar();
       break;
     }
