@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/ManejoDeArchivos.dir/link.d CMakeFiles/ManejoDeArchivos.dir/src/ManejoDeArchivos.c.o -o ManejoDeArchivos

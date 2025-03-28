@@ -1,0 +1,3 @@
+/home/re-l/Escritorio/github/c/4.0/ManejoDeArchivos/build/CMakeFiles/ManejoDeArchivos.dir
+/home/re-l/Escritorio/github/c/4.0/ManejoDeArchivos/build/CMakeFiles/edit_cache.dir
+/home/re-l/Escritorio/github/c/4.0/ManejoDeArchivos/build/CMakeFiles/rebuild_cache.dir
