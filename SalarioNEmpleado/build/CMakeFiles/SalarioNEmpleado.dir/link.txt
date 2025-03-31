@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/SalarioNEmpleado.dir/link.d CMakeFiles/SalarioNEmpleado.dir/src/SalarioNEmpleado.c.o -o SalarioNEmpleado

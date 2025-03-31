@@ -1,0 +1,3 @@
+/home/re-l/Escritorio/github/c/SalarioNEmpleado/build/CMakeFiles/SalarioNEmpleado.dir
+/home/re-l/Escritorio/github/c/SalarioNEmpleado/build/CMakeFiles/edit_cache.dir
+/home/re-l/Escritorio/github/c/SalarioNEmpleado/build/CMakeFiles/rebuild_cache.dir
