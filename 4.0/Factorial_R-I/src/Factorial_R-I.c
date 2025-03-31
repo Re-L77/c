@@ -8,7 +8,8 @@
 /*
  * Programa que ejemplifica el uso de funciones recursivas, iterativas
  * funciones y porcedimientos con y sin argumentos, con variables locales y
- * globales. Autor : Ordaz Magos Juan Pablo Fecha de creación: lun 24 mar 2025
+ * globales para calcular un factorial.
+ * Autor : Ordaz Magos Juan Pablo Fecha de creación: lun 24 mar 2025
  * 08:27:26 CST Versión: 1.1
  */
 

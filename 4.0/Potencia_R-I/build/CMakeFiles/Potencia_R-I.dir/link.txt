@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/Potencia_R-I.dir/link.d "CMakeFiles/Potencia_R-I.dir/src/Potencia_R-I.c.o" -o Potencia_R-I

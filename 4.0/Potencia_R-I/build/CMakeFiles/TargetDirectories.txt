@@ -1,0 +1,3 @@
+/home/re-l/Escritorio/github/c/4.0/Potencia_R-I/build/CMakeFiles/Potencia_R-I.dir
+/home/re-l/Escritorio/github/c/4.0/Potencia_R-I/build/CMakeFiles/edit_cache.dir
+/home/re-l/Escritorio/github/c/4.0/Potencia_R-I/build/CMakeFiles/rebuild_cache.dir
