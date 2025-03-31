@@ -5,10 +5,10 @@
 #include <stdlib.h>
 /*
  * Programa que calcula el promedio de 4 calificaciones de un alumno
- * y muestra su evaluación final
+ * y muestra su evaluación final implementando arreglos unidimensionales
  * Autor : Ordaz Magos Juan Pablo
  * Fecha de creación: 2025-03-06
- * Versión: 1.0
+ * Versión: 3.0
  */
 int cuenta;
 
@@ -48,6 +48,8 @@ void obtener_leyenda(float promedio) {
     printf("Excelente Felicitaciones");
   }
 }
+
+int menu() {}
 
 int main() {
   char continuar;
