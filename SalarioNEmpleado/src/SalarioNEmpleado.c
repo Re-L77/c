@@ -120,6 +120,7 @@ void verDatos() {
     printf("\n[ERROR] - al abrir el archivo");
     return;
   }
+  fclose(archivo);
 }
 
 void incrementar() {}
