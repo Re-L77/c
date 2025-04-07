@@ -25,7 +25,7 @@ int menu()
   return opcion;
 }
 
-bool PedirNumeros()
+bool PedirBaseYExponente()
 {
   do
   {
@@ -39,11 +39,6 @@ bool PedirNumeros()
 
   printf("Digita el exponente: ");
   scanf("%i", &exponente);
-  if (exponente < 0)
-  {
-    printf("\nNo se puede calcular la potencia con un exponente negativo.");
-    return false;
-  }
   return true;
 }
 
@@ -56,7 +51,7 @@ void MostrarResultado(const char *info)
 
 void PotenciaIterativa()
 {
-  bool verifica = PedirNumeros();
+  bool verifica = PedirBaseYExponente();
   if (verifica)
   {
     resultado = 1;
@@ -83,7 +78,7 @@ int main(int argc, char *argv[])
   setlocale(LC_ALL, "");
   do
   {
-    system("clear");
+    // system("clear");
     respuesta = menu();
     switch (respuesta)
     {
@@ -91,7 +86,7 @@ int main(int argc, char *argv[])
       PotenciaIterativa();
       break;
     case 2:
-      verifica = PedirNumeros();
+      verifica = PedirBaseYExponente();
       if (verifica)
       {
         resultado = PotenciaRecursiva(base, exponente);
