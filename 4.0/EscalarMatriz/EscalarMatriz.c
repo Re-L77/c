@@ -10,14 +10,14 @@
 
 float datos[4][3];
 bool valido = false;
+int fila, col;
 
-void capturar() {
-  static int fila;
-  static int col;
-  static int cont;
-  cont = 1;
-  for (fila = 0; fila < 4; fila++) {
-    for (col = 0; col <= 2; col++) {
+void capturar()
+{
+  for (fila = 0; fila < 4; fila++)
+  {
+    for (col = 0; col <= 2; col++)
+    {
       printf("Número [%d][%d] :", fila, col);
       scanf("%f", &datos[fila][col]);
     }
@@ -25,42 +25,56 @@ void capturar() {
   valido = true;
 }
 
-void verD() {
-  if (valido == true) {
-    for (int fila = 0; fila <= 3; fila++) {
-      for (int col = 0; col <= 2; col++) {
+void verD()
+{
+  if (valido == true)
+  {
+    for (fila = 0; fila <= 3; fila++)
+    {
+      for (col = 0; col <= 2; col++)
+      {
         printf("[%f] ", datos[fila][col]);
       }
       printf("\n");
     }
-  } else {
+  }
+  else
+  {
     printf("[ERROR] - Matriz vacía.\n");
   }
 }
 
-void multiplica() {
+void multiplica()
+{
   static float res[4][3];
   static float escalar;
-  if (valido == true) {
+  if (valido == true)
+  {
     printf("Digite escalar: ");
     scanf("%f", &escalar);
-    for (int fila = 0; fila <= 3; fila++) {
-      for (int col = 0; col <= 2; col++) {
+    for (fila = 0; fila <= 3; fila++)
+    {
+      for (col = 0; col <= 2; col++)
+      {
         res[fila][col] = datos[fila][col] * escalar;
         printf("[%f] ", res[fila][col]);
       }
       printf("\n");
     }
-  } else {
+  }
+  else
+  {
     printf("[ERROR] - Matriz vacía.\n");
   }
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
   char resp;
   int opc;
   system("clear");
-  do {
+  do
+  {
     printf("\nMENÚ\n");
     printf("\n 1- Capturar datos.");
     printf("\n 2- Ver datos.");
@@ -68,7 +82,8 @@ int main(int argc, char *argv[]) {
     printf("\n 4- Salir.\n");
     printf("\nOpción: ");
     scanf("%d", &opc);
-    switch (opc) {
+    switch (opc)
+    {
     case 1:
       system("clear");
       capturar();
