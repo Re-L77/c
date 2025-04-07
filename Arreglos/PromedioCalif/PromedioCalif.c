@@ -44,15 +44,21 @@ void verDatos() {
 }
 
 void cambiarCalif() {
-  int i;
-  float calificacion;
+  int indice;
+  float nuevaCalificacion;
   do {
-    printf("\n¿Que calificación deseas cambiar?: ");
-    scanf("%f", &calificacion);
-    if (calificacion < 0 || calificacion > 2) {
-      printf("[ERROR] - Ingresa un valor adecuado")
+    verDatos();
+    printf("\n¿Que calificación deseas cambiar? [0, 1, 2]: ");
+    scanf("%i", &indice);
+    if (indice < 0 || indice > 2) {
+      printf("[ERROR] - Ingresa un valor adecuado");
+    } else {
+      printf("Calificacion a cambiar [%.2f] : ", calificaciones[indice]);
+      scanf("%f", &nuevaCalificacion);
+      calificaciones[indice] = nuevaCalificacion;
+      validaCalif(indice, calificaciones[indice]);
     }
-  } while (calificacion < 0 || calificacion > 2);
+  } while (indice < 0 || indice > 2);
 }
 
 void verProm(float promedio) { printf("\nPromedio: %.2f", promedio); }
